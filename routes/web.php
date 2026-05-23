@@ -296,7 +296,7 @@ Route::get('/test-accessor-scope', function () {
         </tr>";
     }
     $tableBukuSemua = $tabel(
-        '📚 A1. Semua Buku — Accessor <code>status_stok_badge</code> &amp; <code>tahun_label</code>',
+        'Semua Buku — Accessor <code>status_stok_badge</code> &amp; <code>tahun_label</code>',
         $headerBuku,
         $barisBuku ?: '<tr><td colspan="8" class="text-center text-muted">Tidak ada data.</td></tr>'
     );
@@ -315,7 +315,7 @@ Route::get('/test-accessor-scope', function () {
         </tr>";
     }
     $tableBukuTerbaru = $tabel(
-        '🆕 A2. Scope <code>terbaru()</code> — Buku Tahun ≥ 2024',
+        'Scope <code>terbaru()</code> — Buku Tahun ≥ 2024',
         '<tr><th>#</th><th>Judul</th><th>Pengarang</th><th>Tahun</th><th>Label</th><th>Stok</th><th>Status</th></tr>',
         $barisTerbaru ?: '<tr><td colspan="7" class="text-center text-muted">Tidak ada data.</td></tr>'
     );
@@ -331,7 +331,7 @@ Route::get('/test-accessor-scope', function () {
         </tr>";
     }
     $tableBukuMenipis = $tabel(
-        '⚠️ A3. Scope <code>stokMenipis()</code> — Stok &lt; 5',
+        'Scope <code>stokMenipis()</code> — Stok &lt; 5',
         '<tr><th>#</th><th>Judul</th><th>Stok</th><th>Status</th></tr>',
         $barisMenipis ?: '<tr><td colspan="4" class="text-center text-muted">Tidak ada data.</td></tr>'
     );
@@ -346,7 +346,7 @@ Route::get('/test-accessor-scope', function () {
         </tr>";
     }
     $tableBukuRange = $tabel(
-        '💰 A4. Scope <code>hargaRange(50000, 150000)</code>',
+        'Scope <code>hargaRange(50000, 150000)</code>',
         '<tr><th>#</th><th>Judul</th><th>Harga</th></tr>',
         $barisRange ?: '<tr><td colspan="3" class="text-center text-muted">Tidak ada data.</td></tr>'
     );
@@ -376,7 +376,7 @@ Route::get('/test-accessor-scope', function () {
         </tr>";
     }
     $tableAnggotaSemua = $tabel(
-        '👥 B1. Semua Anggota — Accessor <code>status_badge</code> &amp; <code>kategori_usia</code>',
+        'Semua Anggota — Accessor <code>status_badge</code> &amp; <code>kategori_usia</code>',
         $headerAnggota,
         $barisAnggota ?: '<tr><td colspan="7" class="text-center text-muted">Tidak ada data.</td></tr>'
     );
@@ -395,7 +395,7 @@ Route::get('/test-accessor-scope', function () {
         </tr>";
     }
     $tableAnggotaBulanIni = $tabel(
-        '📅 B2. Scope <code>terdaftarBulanIni()</code> — Daftar Bulan Ini',
+        'Scope <code>terdaftarBulanIni()</code> — Daftar Bulan Ini',
         '<tr><th>#</th><th>Nama</th><th>Terdaftar Pada</th><th>Status</th></tr>',
         $barisBulanIni ?: '<tr><td colspan="4" class="text-center text-muted">Belum ada anggota baru bulan ini.</td></tr>'
     );
@@ -421,12 +421,12 @@ Route::get('/test-accessor-scope', function () {
     }
     $colHeader = '<tr><th>#</th><th>Nama</th><th>Kategori Usia</th><th>Status</th></tr>';
     $tableAnggotaLaki = $tabel(
-        '♂️ B3a. Scope <code>jenisKelamin(\'L\')</code>',
+        'Scope <code>jenisKelamin(\'L\')</code>',
         $colHeader,
         $barisLaki ?: '<tr><td colspan="4" class="text-center text-muted">Tidak ada data.</td></tr>'
     );
     $tableAnggotaPerempuan = $tabel(
-        '♀️ B3b. Scope <code>jenisKelamin(\'P\')</code>',
+        'Scope <code>jenisKelamin(\'P\')</code>',
         $colHeader,
         $barisPerempuan ?: '<tr><td colspan="4" class="text-center text-muted">Tidak ada data.</td></tr>'
     );
@@ -505,18 +505,18 @@ Route::get('/test-accessor-scope', function () {
         </head>
         <body>
         <div class="page-wrap">
-            <h1 class="page-title">🧪 Testing Accessor &amp; Scope</h1>
+            <h1 class="page-title">Testing Accessor &amp; Scope</h1>
             <p class="text-muted mb-4">Model Buku &amp; Anggota | Laravel Eloquent</p>
  
             {$cardStats}
  
-            <h3 class="mb-3 mt-4 text-primary">📚 Model Buku</h3>
+            <h3 class="mb-3 mt-4 text-primary">Model Buku</h3>
             {$tableBukuSemua}
             {$tableBukuTerbaru}
             {$tableBukuMenipis}
             {$tableBukuRange}
  
-            <h3 class="mb-3 mt-4 text-success">👥 Model Anggota</h3>
+            <h3 class="mb-3 mt-4 text-success">Model Anggota</h3>
             {$tableAnggotaSemua}
             {$tableAnggotaBulanIni}
             {$tableAnggotaLaki}
